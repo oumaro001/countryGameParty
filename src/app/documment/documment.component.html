@@ -1,0 +1,25 @@
+<form [formGroup]="searchForm" class="m-3" (ngSubmit)="onSubmit()"> 
+    <input class="form-control form-control-lg" type="text" placeholder="france" aria-label=".form-control-lg example" 
+    required="" formControlName="search">
+    <button class="btn btn-success bg-success mt-2" type="submit">Recherche</button>
+</form>
+
+<div class="block w-100 d-flex justify-content-center flex-column">
+    <h1 class="text-center">Rechercher des informations sur un pays</h1>
+    <div id="blockAllCard" class=" d-flex justify-content-around flex-wrap" *ngIf="errorSearch == 'true' ">
+    <div *ngFor="let country of arrayList; index as i" class="m-2">
+        <div class="card" style="width: 18rem;">
+            <img src="{{country.flags.png}}" class="card-img-top" alt="{{country.name.common}}">
+            <div class="card-body bg-success">
+              <p class="card-text bg-success">{{country.name.common}}</p>
+              <a class="btn btn-light bg-primary" [routerLink]="['/info_country', country.name.common]">Information</a>
+            </div>
+          </div>
+    </div>
+</div>
+<h2 *ngIf="errorSearch == 'false' ", class="text-center text-bg-danger"> Recherche Ivalide ! </h2>
+</div>
+
+<div *ngIf="this.resultatCountry == 'true' ">
+
+</div>

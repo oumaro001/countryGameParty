@@ -1,0 +1,46 @@
+<div *ngFor="let country of resultatCountry; index as i;">
+
+        <div class="card m-3 bg-body-secondary">
+            <div class="card-header d-flex justify-content-center m-3 flex-wrap" id="block_img">
+              <img src="{{country.flags.png}}" alt="drapeau {{country.name.common}}">
+              <img src="{{country.coatOfArms.png}}" alt="drapeau {{country.name.common}}">
+            </div>
+            <div class="card-body bg-body-secondary">
+              <h1 class="card-title text-center">{{country.name.common}}</h1>
+              <section class="w-100 bg- h-100 d-flex">
+                <article>
+                  <div class="block_info">
+                    <p class="alert alert-danger bg-danger">Capital du pays :</p>
+                    <p class="alert alert-success bg-success">{{country.capital}}</p>
+                  </div>
+                  <div class="block_info">
+                    <p class="alert alert-danger bg-danger">Continent :</p>
+                    <p class="alert alert-success bg-success">{{country.region}}</p>
+                  </div>
+                  <div class="block_info">
+                    <p class="alert alert-danger bg-danger">Nombre de la population :</p>
+                    <p class="alert alert-success bg-success">{{country.population}}<span class="text-danger bg-success">M</span> d'habitants</p>
+                  </div>
+                  <div class="block_info">
+                    <p class="alert alert-danger bg-danger">Language du pays:</p>
+                    <p class="alert alert-success bg-success" *ngFor="let lang of getObjectKeys(country.languages)">
+                    {{ country.languages[lang] }}
+                    </p>
+                  </div>
+                  <div class="block_info">
+                    <p class="alert alert-danger bg-danger">Monnaie du pays:</p>
+                    <p class="alert alert-success bg-success" *ngFor="let monnaie of getObjectKeys(country.currencies)">
+                    <span *ngFor="let m of getObjectKeys(country.currencies[monnaie])" class="bg-success">
+                      {{country.currencies[monnaie][m]}}
+                    </span>
+                    </p>
+                  </div>
+                </article>
+              </section>
+            </div>
+          </div>
+
+
+
+
+</div>

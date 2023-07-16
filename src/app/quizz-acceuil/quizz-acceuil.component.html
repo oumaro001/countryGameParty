@@ -1,0 +1,18 @@
+<div class="container d-flex justify-content-center flex-column w-100 h-100">
+    <img src="../../assets/Images/Qui suis-je  (1).gif">
+    <h1 class=" text-center w-100">Devinez à qui appartiennent ces drapeaux !!</h1>
+    <div class="d-flex justify-content-evenly w-100 flex-wrap">
+
+        <p routerLinkActive="active" class="btn btn-light bg-primary m-1" (click)="linkGame('europe')">Europe</p>
+
+        <p class="btn btn-light bg-danger m-1" (click)="linkGame('asia')">Asie</p>
+
+        <p class="btn btn-light bg-success m-1" (click)="linkGame('africa')">Afrique</p>
+
+        <p class="btn btn-light bg-warning m-1" (click)="linkGame('america')">Amérique</p>
+
+        <p class="btn btn-light  m-1" (click)="linkGame('oceania')">Océanie</p>
+
+        <p class="btn btn-light bg-dark m-1" (click)="linkGame('all')">Monde</p>
+    </div>
+</div>

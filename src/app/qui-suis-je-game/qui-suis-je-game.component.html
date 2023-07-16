@@ -1,0 +1,19 @@
+
+    <main class="w-100">
+<h1 *ngIf="!this.letGo ; else elseBlock" [innerHTML]="" >{{innerHTML}}</h1>
+<ng-template #elseBlock class="w-100">
+    <h2>Qui Suis-je ?</h2>
+    <section>
+    <div id="image" [innerHTML]="showQuestionImg">   
+    </div>
+    <div id="block_reponse">
+    <div *ngFor="let response of listeResponse" id="btn_rep">
+        <p class="btn btn-light bg-success m-1" type="button" (click)="verifReponses(response.name.common)" id="btn_rep" >
+            {{ response.name.common }}
+          </p>
+    </div>
+    </div>
+</section>
+</ng-template>
+</main>
+

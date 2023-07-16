@@ -1,0 +1,45 @@
+#block_img > img{
+
+    margin: 5px 20px;
+    max-width: 12rem;
+    max-height: 10rem;   
+}
+
+article {
+
+    width: 100%;
+    margin: 10px 20px;
+}
+
+.block_info{
+
+    display: flex;
+   
+}
+
+.block_info > p{
+
+    width: 50%;
+    margin: 10px 10px;
+}
+
+
+span{
+
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+@media screen and (max-width: 1100px) {
+
+    .block_info{
+
+        justify-content: center;
+        flex-flow: wrap;
+       
+    }
+    
+    
+}

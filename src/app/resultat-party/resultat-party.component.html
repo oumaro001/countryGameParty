@@ -1,0 +1,26 @@
+
+<div class="w-100" *ngIf="gagnant == true">
+    <h1 class="text-center">Gagné !!</h1>
+    <div class="d-flex justify-content-center">
+    <img src="../../assets/Images/Gif_winner.gif">
+</div>
+    <div class="d-flex justify-content-around" id="point">
+        <p>👍 : <span class="bg bg-success p-1">{{plus}}</span></p>
+        <p>👎 : <span class="bg bg-danger p-1">{{moins}}</span></p>
+    </div>
+    <p class=" text-center bg-success border-light p-3" routerLink="/quizz_acceuil" id="btn_recommence">Recommencer</p>
+</div>
+
+<div class="w-100" *ngIf="gagnant == false">
+    
+        <h1 class="text-center">Perdu !!</h1>
+        <div class="d-flex justify-content-center">
+            <img src="../../assets/Images/Gif_perdu.gif">
+        </div>
+        <div class="d-flex justify-content-around" id="point">
+            <p>👍 : <span class="bg bg-success p-1">{{plus}}</span></p>
+            <p>👎 : <span class="bg bg-danger p-1">{{moins}}</span></p>
+        </div>
+        <p class=" text-center bg-success border-light p-3" routerLink="/quizz_acceuil" id="btn_recommence">Recommencer</p>
+
+    </div>

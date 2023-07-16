@@ -1,0 +1,15 @@
+.navbar {
+    position: fixed !important;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9;
+    display: flex !important;
+    justify-content: space-evenly !important;
+    border: 4px dashed black;
+  }
+
+  .outlet {
+    flex-grow: 1;
+  }
